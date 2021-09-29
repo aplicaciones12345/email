@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::get('/', function() {
     return view('test'); //Que es el formulario de contacto
 });
 
 //Ruta a la que está señalando el formulario de contacto
-Route::post('/contactar', 'App\Http\Controllers\EmailController')->name('contact');
+Route::post('/contactar', 'App\Http\Controllers\EmailController@contact')->name('contact');
