@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2>Formualario de contacto</h2>
+		<h2>Formulario de contacto</h2>
 		<form method="post"  action="{{ route('contact') }}">
 			{{ csrf_field() }}
 			<div class="form-group">
