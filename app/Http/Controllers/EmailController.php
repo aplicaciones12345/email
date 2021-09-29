@@ -9,9 +9,10 @@ class EmailController extends Controller
 {
     public function contact(Request $request){
     	$subject = "Asunto del correo";
-    	$for = "Correo destinatario que recibirá el mensaje";
-    	Mail::send('email', $request->all(), function($msg){
-    		                $msg->from("tucorreo@gmail.com", "Nombre que aparecerá como emisor");
+    	$for = "cursoaplicaciones220@gmail.com";//La misma que en .env MAIL_USERNAME
+    	Mail::send('email', $request->all(), function($msg) use($subject,$for) {
+    		                // $msg->from("javier7422@gmail.com", "Usuario");
+    						$msg->from('javier7422@gmail.com', 'Usuario');
     		                $msg->subject($subject);
     		                $msg->to($for);
     						});
