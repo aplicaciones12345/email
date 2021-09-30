@@ -37,6 +37,11 @@
 			color: white;
 			font-style: bold;
 		}
+
+		button strong {
+			font-size: 25px;
+			color: black;
+		}
 	</style>
 </head>
 <body>
@@ -53,7 +58,7 @@
 				<input type="text" name="msg">
 			</div>
 			<div class="form-group">
-				<button type="submit" id="btn-contact" class="btn">Enviar</button>
+				<button type="submit" id="btn-contact" class="btn btn-success"><strong>Enviar</strong></button>
 			</div>
 		</form>
 	</div>
